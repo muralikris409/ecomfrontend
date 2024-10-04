@@ -1,0 +1,316 @@
+// Products component with pagination update
+import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+
+const Products = () => {
+  const [products, setProducts] = useState([]); // Store fetched data
+  const [currentPage, setCurrentPage] = useState(1); // Store current page
+  const [loading, setLoading] = useState(false); // To handle loading state
+  const [error, setError] = useState(null); // To handle errors
+  const [searchQuery, setSearchQuery] = useState(''); // State for search query
+  const [filterVisible, setFilterVisible] = useState(false); // Show filter form
+  const [filters, setFilters] = useState({
+    category: '',
+    discount: '',
+    stock: '',
+    mrp: ''
+  });
+  
+  const navigate = useNavigate();
+  const itemsPerPage = 10; // Number of items per page
+
+  const isAuth = (sessionKey) => {
+    fetch('http://127.0.0.1:8080/api/isauth', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ name: sessionKey })
+    })
+      .then(response => response.json())
+      .then(data => {
+        if (!data.success) {
+          navigate("/login"); // Redirect using navigate
+        }
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        setError('An error occurred in session auth.');
+      });
+  };
+
+  // Fetch products data from API
+  useEffect(() => {
+    const fetchProducts = async () => {
+      setLoading(true); // Start loading
+      try {
+        const response = await fetch('http://127.0.0.1:8080/api/products');
+        const data = await response.json();
+        setProducts(data.data); // Set fetched data to state
+      } catch (error) {
+        setError('Failed to fetch data');
+      } finally {
+        setLoading(false); // End loading
+      }
+    };
+
+    isAuth(localStorage.getItem('sessionKey'));
+
+    fetchProducts();
+  }, []);
+
+  // Get current products for the current page
+  const indexOfLastItem = currentPage * itemsPerPage;
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+
+  // Handle filter input change
+  const handleFilterChange = (e) => {
+    setFilters({
+      ...filters,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  // Apply filters
+  const filteredProducts = products.filter(product => {
+    return (
+      (filters.category ? product.category.category.toLowerCase() === filters.category.toLowerCase() : true) &&
+      (filters.discount ? product.discount >= parseFloat(filters.discount) : true) &&
+      (filters.stock ? product.stock >= parseInt(filters.stock) : true) &&
+      (filters.mrp ? product.mrp <= parseFloat(filters.mrp) : true) &&
+      (product.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      product.id.toString().includes(searchQuery)|| product.category.category.toString().toLowerCase().includes(searchQuery))
+    );
+  });
+
+  // Get current products for the current page after filtering
+  const currentProducts = filteredProducts.slice(indexOfFirstItem, indexOfLastItem);
+
+  // Pagination Logic
+  const totalPages = Math.ceil(filteredProducts.length / itemsPerPage);
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+
+  const handleNext = () => {
+    if (currentPage < totalPages) {
+      setCurrentPage(currentPage + 1);
+    }
+  };
+
+  const handlePrev = () => {
+    if (currentPage > 1) {
+      setCurrentPage(currentPage - 1);
+    }
+  };
+
+  // Function to generate page numbers with ellipses
+  const generatePagination = () => {
+    const pageNumbers = [];
+    const maxPagesToShow = 5; // Show 5 pages at a time
+
+    if (totalPages <= maxPagesToShow) {
+      // If total pages are less than max pages to show, show all pages
+      for (let i = 1; i <= totalPages; i++) {
+        pageNumbers.push(i);
+      }
+    } else {
+      // Always show first page, last page, and current range
+      const startPage = Math.max(currentPage - 2, 1);
+      const endPage = Math.min(currentPage + 2, totalPages);
+
+      if (startPage > 1) pageNumbers.push(1);
+      if (startPage > 2) pageNumbers.push('...');
+
+      for (let i = startPage; i <= endPage; i++) {
+        pageNumbers.push(i);
+      }
+
+      if (endPage < totalPages - 1) pageNumbers.push('...');
+      if (endPage < totalPages) pageNumbers.push(totalPages);
+    }
+
+    return pageNumbers;
+  };
+
+  const pageNumbers = generatePagination();
+
+  if (loading) {
+    return <div className="text-center">Loading...</div>;
+  }
+
+  if (error) {
+    return <div className="text-red-500">{error}</div>;
+  }
+
+  return (
+    <div>
+      <nav className="bg-gray-800 p-4 mb-4">
+        <div className="flex justify-between items-center">
+          <div className="text-white text-2xl font-bold">All Products</div>
+          <div className="relative w-1/3">
+            <input
+              type="text"
+              placeholder="Search products..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="w-full p-2 pl-10 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-300"
+            />
+            <svg
+              className="absolute left-2 top-2 w-4 h-4 text-gray-500"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 20 20"
+            >
+              <path
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+              />
+            </svg>
+          </div>
+          <button
+            onClick={() => setFilterVisible(!filterVisible)}
+            className="bg-transparent hover:bg-gray-700 text-blue-700 font-semibold hover:border border-white-400 hover:text-white py-2 px-4 border border-white-300 hover:border-transparent rounded"
+          >
+            Filter
+          </button>
+        </div>
+      </nav>
+
+      {/* Filter Form */}
+      {filterVisible && (
+        <div className="bg-white shadow-lg rounded-lg p-4 mb-4">
+ {filterVisible && (
+        <div className="bg-white shadow-lg rounded-lg p-4 mb-4">
+          <h2 className="text-lg font-bold mb-4">Filter Products</h2>
+          <div className="grid grid-cols-2 gap-4">
+            {/* Category Filter */}
+            <div>
+              <label className="block mb-2">Category</label>
+              <select
+                name="category"
+                value={filters.category}
+                onChange={handleFilterChange}
+                className="w-full p-2 border border-gray-300 rounded-md"
+              >
+                <option value="">All Categories</option>
+                <option value="Electronics">Electronics</option>
+                <option value="Clothing">Clothing</option>
+                <option value="Books">Books</option>
+                <option value="Home Appliances">Home Appliances</option>
+                <option value="Sports Equipment">Sports Equipment</option>
+                <option value="Beauty Products">Beauty Products</option>
+                {/* Add more categories as needed */}
+              </select>
+            </div>
+
+            {/* Discount Filter */}
+            <div>
+              <label className="block mb-2">Minimum Discount (%)</label>
+              <input
+                type="number"
+                name="discount"
+                value={filters.discount}
+                onChange={handleFilterChange}
+                className="w-full p-2 border border-gray-300 rounded-md"
+              />
+            </div>
+
+            {/* Stock Filter */}
+            <div>
+              <label className="block mb-2">Minimum Stock</label>
+              <input
+                type="number"
+                name="stock"
+                value={filters.stock}
+                onChange={handleFilterChange}
+                className="w-full p-2 border border-gray-300 rounded-md"
+              />
+            </div>
+
+            {/* MRP Filter */}
+            <div>
+              <label className="block mb-2">Maximum MRP</label>
+              <input
+                type="number"
+                name="mrp"
+                value={filters.mrp}
+                onChange={handleFilterChange}
+                className="w-full p-2 border border-gray-300 rounded-md"
+              />
+            </div>
+          </div>
+        </div>
+      )}
+        </div>
+      )}
+
+      <div className="container mx-auto p-4">
+        <table className="min-w-full divide-y divide-gray-200">
+          <thead>
+            <tr>
+              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">ID</th>
+              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Name</th>
+              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Category</th>
+              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Price</th>
+              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Discount</th>
+              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Stock</th>
+            </tr>
+          </thead>
+          <tbody>
+            {currentProducts.length > 0 ? (
+              currentProducts.map((product) => (
+                <tr key={product.id} className="odd:bg-white even:bg-gray-100">
+                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800">{product.id}</td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800">{product.name}</td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800">{product.category.category}</td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800">{product.mrp}</td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800">{product.discount}</td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800">{product.stock}</td>
+                </tr>
+              ))
+            ) : (
+              <tr>
+                <td colSpan="6" className="text-center">No products found</td>
+              </tr>
+            )}
+          </tbody>
+        </table>
+
+        {/* Pagination */}
+        <div className="flex justify-center mt-4">
+          <button
+            onClick={handlePrev}
+            className="bg-transparent hover:bg-gray-500 text-blue-700 font-semibold py-2 px-4 border border-blue-500 hover:border-transparent rounded"
+          >
+            Previous
+          </button>
+
+          {pageNumbers.map((number, index) =>
+            number === '...' ? (
+              <span key={index} className="px-3 py-2">...</span>
+            ) : (
+              <button
+                key={index}
+                onClick={() => paginate(number)}
+                className={`px-3 py-2 mx-1 border rounded ${currentPage === number ? 'bg-blue-500 text-white' : 'bg-transparent text-blue-700 border-blue-500'}`}
+              >
+                {number}
+              </button>
+            )
+          )}
+
+          <button
+            onClick={handleNext}
+            className="bg-transparent hover:bg-gray-500 text-blue-700 font-semibold py-2 px-4 border border-blue-500 hover:border-transparent rounded"
+          >
+            Next
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Products;

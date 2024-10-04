@@ -1,0 +1,1200 @@
+{
+    "id": 1,
+    "name": "Smartphone",
+    "description": "Latest 5G smartphone with 64MP camera.",
+    "mrp": 699.99,
+    "discount": 10,
+    "stock": 100,
+    "category": {
+      "id": 1,
+      "category": "Electronics"
+    }
+  },
+  {
+    "id": 2,
+    "name": "Laptop",
+    "description": "High-performance laptop for gaming and work.",
+    "mrp": 999.99,
+    "discount": 15,
+    "stock": 50,
+    "category": {
+      "id": 1,
+      "category": "Electronics"
+    }
+  },
+  {
+    "id": 3,
+    "name": "Smartwatch",
+    "description": "Wearable device with fitness tracking features.",
+    "mrp": 199.99,
+    "discount": 5,
+    "stock": 150,
+    "category": {
+      "id": 1,
+      "category": "Electronics"
+    }
+  },
+  {
+    "id": 4,
+    "name": "Wireless Earbuds",
+    "description": "Noise-cancelling wireless earbuds with long battery life.",
+    "mrp": 129.99,
+    "discount": 20,
+    "stock": 200,
+    "category": {
+      "id": 1,
+      "category": "Electronics"
+    }
+  },
+  {
+    "id": 5,
+    "name": "Bluetooth Speaker",
+    "description": "Portable speaker with deep bass and waterproof design.",
+    "mrp": 79.99,
+    "discount": 10,
+    "stock": 75,
+    "category": {
+      "id": 2,
+      "category": "Electronics"
+    }
+  },
+  {
+    "id": 6,
+    "name": "T-shirt",
+    "description": "Cotton t-shirt with round neck.",
+    "mrp": 15.99,
+    "discount": 5,
+    "stock": 500,
+    "category": {
+      "id": 3,
+      "category": "Clothing"
+    }
+  },
+  {
+    "id": 7,
+    "name": "Jeans",
+    "description": "Slim-fit denim jeans for men.",
+    "mrp": 39.99,
+    "discount": 10,
+    "stock": 250,
+    "category": {
+      "id": 3,
+      "category": "Clothing"
+    }
+  },
+  {
+    "id": 8,
+    "name": "Jacket",
+    "description": "Waterproof jacket with hood.",
+    "mrp": 79.99,
+    "discount": 15,
+    "stock": 80,
+    "category": {
+      "id": 3,
+      "category": "Clothing"
+    }
+  },
+  {
+    "id": 9,
+    "name": "Dress",
+    "description": "Elegant summer dress for women.",
+    "mrp": 49.99,
+    "discount": 20,
+    "stock": 150,
+    "category": {
+      "id": 3,
+      "category": "Clothing"
+    }
+  },
+  {
+    "id": 10,
+    "name": "Sweater",
+    "description": "Wool sweater for winter.",
+    "mrp": 59.99,
+    "discount": 10,
+    "stock": 200,
+    "category": {
+      "id": 3,
+      "category": "Clothing"
+    }
+  },
+  {
+    "id": 11,
+    "name": "Novel",
+    "description": "A thrilling mystery novel by bestselling author.",
+    "mrp": 19.99,
+    "discount": 5,
+    "stock": 300,
+    "category": {
+      "id": 4,
+      "category": "Books"
+    }
+  },
+  {
+    "id": 12,
+    "name": "Science Textbook",
+    "description": "Comprehensive guide to physics and chemistry.",
+    "mrp": 49.99,
+    "discount": 10,
+    "stock": 100,
+    "category": {
+      "id": 4,
+      "category": "Books"
+    }
+  },
+  {
+    "id": 13,
+    "name": "Cookbook",
+    "description": "Recipes for delicious and healthy meals.",
+    "mrp": 29.99,
+    "discount": 15,
+    "stock": 50,
+    "category": {
+      "id": 4,
+      "category": "Books"
+    }
+  },
+  {
+    "id": 14,
+    "name": "Self-Help Book",
+    "description": "Guide to personal development and success.",
+    "mrp": 24.99,
+    "discount": 5,
+    "stock": 200,
+    "category": {
+      "id": 4,
+      "category": "Books"
+    }
+  },
+  {
+    "id": 15,
+    "name": "Children’s Book",
+    "description": "Illustrated book for kids.",
+    "mrp": 14.99,
+    "discount": 10,
+    "stock": 150,
+    "category": {
+      "id": 4,
+      "category": "Books"
+    }
+  },
+  {
+    "id": 16,
+    "name": "Washing Machine",
+    "description": "Automatic front-load washing machine.",
+    "mrp": 499.99,
+    "discount": 20,
+    "stock": 20,
+    "category": {
+      "id": 5,
+      "category": "Home Appliances"
+    }
+  },
+  {
+    "id": 17,
+    "name": "Microwave Oven",
+    "description": "Compact microwave oven with grill function.",
+    "mrp": 199.99,
+    "discount": 10,
+    "stock": 30,
+    "category": {
+      "id": 5,
+      "category": "Home Appliances"
+    }
+  },
+  {
+    "id": 18,
+    "name": "Vacuum Cleaner",
+    "description": "Cordless vacuum cleaner with powerful suction.",
+    "mrp": 299.99,
+    "discount": 15,
+    "stock": 50,
+    "category": {
+      "id": 5,
+      "category": "Home Appliances"
+    }
+  },
+  {
+    "id": 19,
+    "name": "Air Purifier",
+    "description": "Smart air purifier with HEPA filter.",
+    "mrp": 149.99,
+    "discount": 10,
+    "stock": 60,
+    "category": {
+      "id": 5,
+      "category": "Home Appliances"
+    }
+  },
+  {
+    "id": 20,
+    "name": "Refrigerator",
+    "description": "Double-door refrigerator with freezer.",
+    "mrp": 799.99,
+    "discount": 25,
+    "stock": 10,
+    "category": {
+      "id": 5,
+      "category": "Home Appliances"
+    }
+  },
+  {
+    "id": 21,
+    "name": "Football",
+    "description": "Official size football for outdoor games.",
+    "mrp": 29.99,
+    "discount": 5,
+    "stock": 100,
+    "category": {
+      "id": 6,
+      "category": "Sports Equipment"
+    }
+  },
+  {
+    "id": 22,
+    "name": "Tennis Racket",
+    "description": "Lightweight racket with comfortable grip.",
+    "mrp": 99.99,
+    "discount": 10,
+    "stock": 50,
+    "category": {
+      "id": 6,
+      "category": "Sports Equipment"
+    }
+  },
+  {
+    "id": 23,
+    "name": "Yoga Mat",
+    "description": "Non-slip yoga mat for fitness routines.",
+    "mrp": 49.99,
+    "discount": 15,
+    "stock": 150,
+    "category": {
+      "id": 6,
+      "category": "Sports Equipment"
+    }
+  },
+  {
+    "id": 24,
+    "name": "Dumbbells",
+    "description": "Set of 5kg dumbbells for strength training.",
+    "mrp": 79.99,
+    "discount": 20,
+    "stock": 80,
+    "category": {
+      "id": 6,
+      "category": "Sports Equipment"
+    }
+  },
+  {
+    "id": 25,
+    "name": "Treadmill",
+    "description": "Electric treadmill with adjustable speed.",
+    "mrp": 999.99,
+    "discount": 25,
+    "stock": 10,
+    "category": {
+      "id": 6,
+      "category": "Sports Equipment"
+    }
+  },
+  {
+    "id": 26,
+    "name": "Moisturizer",
+    "description": "Hydrating face cream for dry skin.",
+    "mrp": 29.99,
+    "discount": 10,
+    "stock": 100,
+    "category": {
+      "id": 7,
+      "category": "Beauty Products"
+    }
+  },
+  {
+    "id": 27,
+    "name": "Lipstick",
+    "description": "Matte finish lipstick in various shades.",
+    "mrp": 19.99,
+    "discount": 5,
+    "stock": 200,
+    "category": {
+      "id": 7,
+      "category": "Beauty Products"
+    }
+  },
+  {
+    "id": 28,
+    "name": "Shampoo",
+    "description": "Anti-dandruff shampoo for daily use.",
+    "mrp": 14.99,
+    "discount": 5,
+    "stock": 300,
+    "category": {
+      "id": 7,
+      "category": "Beauty Products"
+    }
+  },
+  {
+    "id": 29,
+    "name": "Perfume",
+    "description": "Long-lasting fragrance for women.",
+    "mrp": 49.99,
+    "discount": 15,
+    "stock": 50,
+    "category": {
+      "id": 7,
+      "category": "Beauty Products"
+    }
+  },
+  {
+    "id": 30,
+    "name": "Face Mask",
+    "description": "Charcoal face mask for deep cleansing.",
+    "mrp": 9.99,
+    "discount": 5,
+    "stock": 150,
+    "category": {
+      "id": 7,
+      "category": "Beauty Products"
+    }
+  },
+  {
+    "id": 31,
+    "name": "Action Figure",
+    "description": "Superhero action figure with movable joints.",
+    "mrp": 19.99,
+    "discount": 5,
+    "stock": 150,
+    "category": {
+      "id": 8,
+      "category": "Toys"
+    }
+  },
+  {
+    "id": 32,
+    "name": "Lego Set",
+    "description": "Building blocks set for creative play.",
+    "mrp": 59.99,
+    "discount": 10,
+    "stock": 100,
+    "category": {
+      "id": 8,
+      "category": "Toys"
+    }
+  },
+  {
+    "id": 33,
+    "name": "Dollhouse",
+    "description": "Wooden dollhouse with furniture.",
+    "mrp": 79.99,
+    "discount": 15,
+    "stock": 50,
+    "category": {
+      "id": 8,
+      "category": "Toys"
+    }
+  },
+  {
+    "id": 34,
+    "name": "Puzzle",
+    "description": "1000-piece jigsaw puzzle.",
+    "mrp": 19.99,
+    "discount": 5,
+    "stock": 200,
+    "category": {
+      "id": 8,
+      "category": "Toys"
+    }
+  },
+  {
+    "id": 35,
+    "name": "Board Game",
+    "description": "Strategy board game for family fun.",
+    "mrp": 39.99,
+    "discount": 10,
+    "stock": 75,
+    "category": {
+      "id": 8,
+      "category": "Toys"
+    }
+  },
+  {
+    "id": 36,
+    "name": "Sofa",
+    "description": "3-seater fabric sofa with cushions.",
+    "mrp": 799.99,
+    "discount": 20,
+    "stock": 10,
+    "category": {
+      "id": 9,
+      "category": "Furniture"
+    }
+  },
+  {
+    "id": 37,
+    "name": "Dining Table",
+    "description": "Wooden dining table with 4 chairs.",
+    "mrp": 499.99,
+    "discount": 15,
+    "stock": 5,
+    "category": {
+      "id": 9,
+      "category": "Furniture"
+    }
+  },
+  {
+    "id": 38,
+    "name": "Office Chair",
+    "description": "Ergonomic office chair with adjustable height.",
+    "mrp": 199.99,
+    "discount": 10,
+    "stock": 50,
+    "category": {
+      "id": 9,
+      "category": "Furniture"
+    }
+  },
+  {
+    "id": 39,
+    "name": "Bed Frame",
+    "description": "Queen-size bed frame with storage.",
+    "mrp": 999.99,
+    "discount": 25,
+    "stock": 5,
+    "category": {
+      "id": 9,
+      "category": "Furniture"
+    }
+  },
+  {
+    "id": 40,
+    "name": "Bookshelf",
+    "description": "5-tier wooden bookshelf for home.",
+    "mrp": 149.99,
+    "discount": 10,
+    "stock": 20,
+    "category": {
+      "id": 9,
+      "category": "Furniture"
+    }
+  },
+  {
+    "id": 41,
+    "name": "Rice",
+    "description": "5kg pack of basmati rice.",
+    "mrp": 19.99,
+    "discount": 5,
+    "stock": 200,
+    "category": {
+      "id": 10,
+      "category": "Grocery"
+    }
+  },
+  {
+    "id": 42,
+    "name": "Olive Oil",
+    "description": "1L bottle of extra virgin olive oil.",
+    "mrp": 14.99,
+    "discount": 10,
+    "stock": 150,
+    "category": {
+      "id": 10,
+      "category": "Grocery"
+    }
+  },
+  {
+    "id": 43,
+    "name": "Cereal",
+    "description": "Breakfast cereal with whole grains.",
+    "mrp": 9.99,
+    "discount": 5,
+    "stock": 300,
+    "category": {
+      "id": 10,
+      "category": "Grocery"
+    }
+  },
+  {
+    "id": 44,
+    "name": "Coffee",
+    "description": "500g pack of ground coffee beans.",
+    "mrp": 24.99,
+    "discount": 15,
+    "stock": 100,
+    "category": {
+      "id": 10,
+      "category": "Grocery"
+    }
+  },
+  {
+    "id": 45,
+    "name": "Honey",
+    "description": "500g jar of organic honey.",
+    "mrp": 19.99,
+    "discount": 10,
+    "stock": 200,
+    "category": {
+      "id": 10,
+      "category": "Grocery"
+    }
+  },
+  {
+    "id": 46,
+    "name": "Flower Pot",
+    "description": "Ceramic pot for indoor plants.",
+    "mrp": 9.99,
+    "discount": 5,
+    "stock": 150,
+    "category": {
+      "id": 11,
+      "category": "Gardening"
+    }
+  },
+  {
+    "id": 47,
+    "name": "Gardening Tools",
+    "description": "Set of hand tools for gardening.",
+    "mrp": 39.99,
+    "discount": 10,
+    "stock": 100,
+    "category": {
+      "id": 11,
+      "category": "Gardening"
+    }
+  },
+  {
+    "id": 48,
+    "name": "Seeds",
+    "description": "Pack of vegetable seeds for home gardening.",
+    "mrp": 4.99,
+    "discount": 5,
+    "stock": 300,
+    "category": {
+      "id": 11,
+      "category": "Gardening"
+    }
+  },
+  {
+    "id": 49,
+    "name": "Watering Can",
+    "description": "Plastic watering can with nozzle.",
+    "mrp": 14.99,
+    "discount": 5,
+    "stock": 75,
+    "category": {
+      "id": 11,
+      "category": "Gardening"
+    }
+  },
+  {
+    "id": 50,
+    "name": "Fertilizer",
+    "description": "Organic fertilizer for plants.",
+    "mrp": 19.99,
+    "discount": 10,
+    "stock": 100,
+    "category": {
+      "id": 11,
+      "category": "Gardening"
+    }
+  },
+  {
+    "id": 51,
+    "name": "Car Wax",
+    "description": "High-gloss wax for car polishing.",
+    "mrp": 29.99,
+    "discount": 10,
+    "stock": 50,
+    "category": {
+      "id": 12,
+      "category": "Automotive"
+    }
+  },
+  {
+    "id": 52,
+    "name": "Engine Oil",
+    "description": "Synthetic engine oil for cars.",
+    "mrp": 39.99,
+    "discount": 5,
+    "stock": 100,
+    "category": {
+      "id": 12,
+      "category": "Automotive"
+    }
+  },
+  {
+    "id": 53,
+    "name": "Car Cover",
+    "description": "Waterproof cover for cars.",
+    "mrp": 49.99,
+    "discount": 10,
+    "stock": 30,
+    "category": {
+      "id": 12,
+      "category": "Automotive"
+    }
+  },
+  {
+    "id": 54,
+    "name": "Tire Pressure Gauge",
+    "description": "Digital gauge for checking tire pressure.",
+    "mrp": 14.99,
+    "discount": 5,
+    "stock": 150,
+    "category": {
+      "id": 12,
+      "category": "Automotive"
+    }
+  },
+  {
+    "id": 55,
+    "name": "Car Battery",
+    "description": "12V battery for automotive use.",
+    "mrp": 99.99,
+    "discount": 15,
+    "stock": 20,
+    "category": {
+      "id": 12,
+      "category": "Automotive"
+    }
+  },
+  {
+    "id": 56,
+    "name": "Gold Necklace",
+    "description": "18K gold necklace with pendant.",
+    "mrp": 999.99,
+    "discount": 5,
+    "stock": 10,
+    "category": {
+      "id": 13,
+      "category": "Jewelry"
+    }
+  },
+  {
+    "id": 57,
+    "name": "Diamond Ring",
+    "description": "Solitaire diamond ring in white gold.",
+    "mrp": 1999.99,
+    "discount": 10,
+    "stock": 5,
+    "category": {
+      "id": 13,
+      "category": "Jewelry"
+    }
+  },
+  {
+    "id": 58,
+    "name": "Bracelet",
+    "description": "Sterling silver bracelet with charms.",
+    "mrp": 149.99,
+    "discount": 5,
+    "stock": 50,
+    "category": {
+      "id": 13,
+      "category": "Jewelry"
+    }
+  },
+  {
+    "id": 59,
+    "name": "Earrings",
+    "description": "Stud earrings with sapphire stones.",
+    "mrp": 249.99,
+    "discount": 10,
+    "stock": 20,
+    "category": {
+      "id": 13,
+      "category": "Jewelry"
+    }
+  },
+  {
+    "id": 60,
+    "name": "Watch",
+    "description": "Luxury wristwatch with leather strap.",
+    "mrp": 499.99,
+    "discount": 15,
+    "stock": 25,
+    "category": {
+      "id": 13,
+      "category": "Jewelry"
+    }
+  },
+  {
+    "id": 61,
+    "name": "Notebook",
+    "description": "A5 notebook with ruled pages.",
+    "mrp": 4.99,
+    "discount": 5,
+    "stock": 500,
+    "category": {
+      "id": 14,
+      "category": "Stationery"
+    }
+  },
+  {
+    "id": 62,
+    "name": "Pen Set",
+    "description": "Pack of 5 gel pens in various colors.",
+    "mrp": 9.99,
+    "discount": 5,
+    "stock": 300,
+    "category": {
+      "id": 14,
+      "category": "Stationery"
+    }
+  },
+  {
+    "id": 63,
+    "name": "Desk Organizer",
+    "description": "Plastic desk organizer with multiple compartments.",
+    "mrp": 19.99,
+    "discount": 10,
+    "stock": 100,
+    "category": {
+      "id": 14,
+      "category": "Stationery"
+    }
+  },
+  {
+    "id": 64,
+    "name": "Stapler",
+    "description": "Heavy-duty stapler for office use.",
+    "mrp": 14.99,
+    "discount": 5,
+    "stock": 200,
+    "category": {
+      "id": 14,
+      "category": "Stationery"
+    }
+  },
+  {
+    "id": 65,
+    "name": "Highlighters",
+    "description": "Pack of 6 fluorescent highlighters.",
+    "mrp": 9.99,
+    "discount": 5,
+    "stock": 250,
+    "category": {
+      "id": 14,
+      "category": "Stationery"
+    }
+  },
+  {
+    "id": 66,
+    "name": "Dog Food",
+    "description": "5kg pack of dry dog food.",
+    "mrp": 29.99,
+    "discount": 10,
+    "stock": 100,
+    "category": {
+      "id": 15,
+      "category": "Pet Supplies"
+    }
+  },
+  {
+    "id": 67,
+    "name": "Cat Litter",
+    "description": "10kg bag of clumping cat litter.",
+    "mrp": 19.99,
+    "discount": 5,
+    "stock": 150,
+    "category": {
+      "id": 15,
+      "category": "Pet Supplies"
+    }
+  },
+  {
+    "id": 68,
+    "name": "Pet Bed",
+    "description": "Soft bed for small dogs or cats.",
+    "mrp": 49.99,
+    "discount": 15,
+    "stock": 50,
+    "category": {
+      "id": 15,
+      "category": "Pet Supplies"
+    }
+  },
+  {
+    "id": 69,
+    "name": "Bird Cage",
+    "description": "Metal cage for pet birds.",
+    "mrp": 79.99,
+    "discount": 10,
+    "stock": 30,
+    "category": {
+      "id": 15,
+      "category": "Pet Supplies"
+    }
+  },
+  {
+    "id": 70,
+    "name": "Aquarium",
+    "description": "Glass aquarium with filter system.",
+    "mrp": 99.99,
+    "discount": 20,
+    "stock": 20,
+    "category": {
+      "id": 15,
+      "category": "Pet Supplies"
+    }
+  },
+  {
+    "id": 71,
+    "name": "Guitar",
+    "description": "Acoustic guitar with mahogany body.",
+    "mrp": 199.99,
+    "discount": 10,
+    "stock": 50,
+    "category": {
+      "id": 16,
+      "category": "Music Instruments"
+    }
+  },
+  {
+    "id": 72,
+    "name": "Keyboard",
+    "description": "61-key digital piano for beginners.",
+    "mrp": 149.99,
+    "discount": 5,
+    "stock": 100,
+    "category": {
+      "id": 16,
+      "category": "Music Instruments"
+    }
+  },
+  {
+    "id": 73,
+    "name": "Drum Set",
+    "description": "5-piece drum set with cymbals.",
+    "mrp": 499.99,
+    "discount": 15,
+    "stock": 20,
+    "category": {
+      "id": 16,
+      "category": "Music Instruments"
+    }
+  },
+  {
+    "id": 74,
+    "name": "Violin",
+    "description": "Full-size violin with bow.",
+    "mrp": 299.99,
+    "discount": 10,
+    "stock": 30,
+    "category": {
+      "id": 16,
+      "category": "Music Instruments"
+    }
+  },
+  {
+    "id": 75,
+    "name": "Flute",
+    "description": "Silver-plated flute for music students.",
+    "mrp": 99.99,
+    "discount": 5,
+    "stock": 80,
+    "category": {
+      "id": 16,
+      "category": "Music Instruments"
+    }
+  },
+  {
+    "id": 76,
+    "name": "Yoga Ball",
+    "description": "Anti-burst yoga ball for exercises.",
+    "mrp": 29.99,
+    "discount": 10,
+    "stock": 100,
+    "category": {
+      "id": 17,
+      "category": "Health & Wellness"
+    }
+  },
+  {
+    "id": 77,
+    "name": "Massage Gun",
+    "description": "Handheld massage gun for muscle recovery.",
+    "mrp": 199.99,
+    "discount": 15,
+    "stock": 50,
+    "category": {
+      "id": 17,
+      "category": "Health & Wellness"
+    }
+  },
+  {
+    "id": 78,
+    "name": "Supplements",
+    "description": "Multivitamin supplements for daily health.",
+    "mrp": 49.99,
+    "discount": 5,
+    "stock": 200,
+    "category": {
+      "id": 17,
+      "category": "Health & Wellness"
+    }
+  },
+  {
+    "id": 79,
+    "name": "Resistance Bands",
+    "description": "Set of resistance bands for workouts.",
+    "mrp": 19.99,
+    "discount": 10,
+    "stock": 150,
+    "category": {
+      "id": 17,
+      "category": "Health & Wellness"
+    }
+  },
+  {
+    "id": 80,
+    "name": "Protein Powder",
+    "description": "1kg pack of whey protein for muscle building.",
+    "mrp": 79.99,
+    "discount": 15,
+    "stock": 100,
+    "category": {
+      "id": 17,
+      "category": "Health & Wellness"
+    }
+  },
+  {
+    "id": 81,
+    "name": "Running Shoes",
+    "description": "Lightweight running shoes for men.",
+    "mrp": 99.99,
+    "discount": 20,
+    "stock": 100,
+    "category": {
+      "id": 18,
+      "category": "Footwear"
+    }
+  },
+  {
+    "id": 82,
+    "name": "Sandals",
+    "description": "Comfortable sandals for summer wear.",
+    "mrp": 29.99,
+    "discount": 5,
+    "stock": 200,
+    "category": {
+      "id": 18,
+      "category": "Footwear"
+    }
+  },
+  {
+    "id": 83,
+    "name": "Boots",
+    "description": "Leather boots for outdoor activities.",
+    "mrp": 149.99,
+    "discount": 10,
+    "stock": 50,
+    "category": {
+      "id": 18,
+      "category": "Footwear"
+    }
+  },
+  {
+    "id": 84,
+    "name": "Heels",
+    "description": "High-heeled shoes for formal occasions.",
+    "mrp": 79.99,
+    "discount": 15,
+    "stock": 80,
+    "category": {
+      "id": 18,
+      "category": "Footwear"
+    }
+  },
+  {
+    "id": 85,
+    "name": "Flip-flops",
+    "description": "Casual flip-flops for beach use.",
+    "mrp": 19.99,
+    "discount": 5,
+    "stock": 300,
+    "category": {
+      "id": 18,
+      "category": "Footwear"
+    }
+  },
+  {
+    "id": 86,
+    "name": "Cutlery Set",
+    "description": "24-piece stainless steel cutlery set.",
+    "mrp": 49.99,
+    "discount": 10,
+    "stock": 100,
+    "category": {
+      "id": 19,
+      "category": "Kitchenware"
+    }
+  },
+  {
+    "id": 87,
+    "name": "Cookware Set",
+    "description": "Non-stick cookware set with 5 pieces.",
+    "mrp": 99.99,
+    "discount": 15,
+    "stock": 50,
+    "category": {
+      "id": 19,
+      "category": "Kitchenware"
+    }
+  },
+  {
+    "id": 88,
+    "name": "Blender",
+    "description": "Electric blender with 3-speed settings.",
+    "mrp": 79.99,
+    "discount": 20,
+    "stock": 30,
+    "category": {
+      "id": 19,
+      "category": "Kitchenware"
+    }
+  },
+  {
+    "id": 89,
+    "name": "Knife Set",
+    "description": "Professional kitchen knife set with stand.",
+    "mrp": 59.99,
+    "discount": 10,
+    "stock": 70,
+    "category": {
+      "id": 19,
+      "category": "Kitchenware"
+    }
+  },
+  {
+    "id": 90,
+    "name": "Cutting Board",
+    "description": "Bamboo cutting board for kitchen use.",
+    "mrp": 19.99,
+    "discount": 5,
+    "stock": 150,
+    "category": {
+      "id": 19,
+      "category": "Kitchenware"
+    }
+  },
+  {
+    "id": 91,
+    "name": "Luggage",
+    "description": "Large suitcase with wheels.",
+    "mrp": 149.99,
+    "discount": 10,
+    "stock": 50,
+    "category": {
+      "id": 20,
+      "category": "Travel Accessories"
+    }
+  },
+  {
+    "id": 92,
+    "name": "Backpack",
+    "description": "Waterproof backpack for travel.",
+    "mrp": 79.99,
+    "discount": 15,
+    "stock": 100,
+    "category": {
+      "id": 20,
+      "category": "Travel Accessories"
+    }
+  },
+  {
+    "id": 93,
+    "name": "Travel Pillow",
+    "description": "Memory foam travel pillow for neck support.",
+    "mrp": 29.99,
+    "discount": 5,
+    "stock": 150,
+    "category": {
+      "id": 20,
+      "category": "Travel Accessories"
+    }
+  },
+  {
+    "id": 94,
+    "name": "Passport Holder",
+    "description": "Leather passport holder with card slots.",
+    "mrp": 19.99,
+    "discount": 5,
+    "stock": 200,
+    "category": {
+      "id": 20,
+      "category": "Travel Accessories"
+    }
+  },
+  {
+    "id": 95,
+    "name": "Travel Adapter",
+    "description": "Universal adapter for international use.",
+    "mrp": 14.99,
+    "discount": 5,
+    "stock": 300,
+    "category": {
+      "id": 20,
+      "category": "Travel Accessories"
+    }
+  },
+  {
+    "id": 96,
+    "name": "Printer",
+    "description": "Wireless printer for home and office use.",
+    "mrp": 149.99,
+    "discount": 15,
+    "stock": 30,
+    "category": {
+      "id": 21,
+      "category": "Office Supplies"
+    }
+  },
+  {
+    "id": 97,
+    "name": "Office Desk",
+    "description": "Wooden desk with drawers.",
+    "mrp": 199.99,
+    "discount": 10,
+    "stock": 20,
+    "category": {
+      "id": 21,
+      "category": "Office Supplies"
+    }
+  },
+  {
+    "id": 98,
+    "name": "File Cabinet",
+    "description": "Metal filing cabinet with lock.",
+    "mrp": 99.99,
+    "discount": 5,
+    "stock": 50,
+    "category": {
+      "id": 21,
+      "category": "Office Supplies"
+    }
+  },
+  {
+    "id": 99,
+    "name": "Monitor Stand",
+    "description": "Ergonomic stand for computer monitors.",
+    "mrp": 29.99,
+    "discount": 5,
+    "stock": 100,
+    "category": {
+      "id": 21,
+      "category": "Office Supplies"
+    }
+  },
+  {
+    "id": 100,
+    "name": "Whiteboard",
+    "description": "Magnetic whiteboard for office use.",
+    "mrp": 49.99,
+    "discount": 10,
+    "stock": 70,
+    "category": {
+      "id": 21,
+      "category": "Office Supplies"
+    }
+  }
